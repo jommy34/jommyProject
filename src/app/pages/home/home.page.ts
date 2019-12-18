@@ -9,27 +9,23 @@ import{ finalize } from 'rxjs/operators'
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+interface UserData {
+  id: string;
+  username: string;
+  email: string;
+  password: string;
+  songOwn: [];
+}
 export class HomePage {
-  url='http://127.0.0.1:5000/test';
+  url='https://arcane-peak-42559.herokuapp.com/';
 
-  goof=true;
-  getData(){
-      this.http.get(this.url)
-      .subscribe((cat) => {
-        console.log(JSON.stringify(cat))
-     }); 
-  }
-
-  // checkOwnership(input){
-  //   this.http.post("http://127.0.0.1:5000/checkOwnership", JSON.stringify(input))
-  //     .subscribe((name) => {
-  //       console.log(JSON.stringify(name))
-  //    }); 
-  // }
   getUserInform(){
-      this.http.get("http://127.0.0.1:5000/getUserTest")
-        .subscribe((name) => {
-          console.log(JSON.stringify(name))
+    let result:any;
+      this.http.get("https://arcane-peak-42559.herokuapp.com/getUser")
+        .subscribe((userInform) => {
+          // console.log(JSON.stringify(name))
+          // var currentUser: { [id: string]: UserData; } = userInform;
+          result = userInform;
        }); 
     }
 
