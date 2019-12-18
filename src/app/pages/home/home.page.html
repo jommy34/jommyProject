@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Library
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">Hello World!
+    <ion-button (click)="getUserInform()">MEOW</ion-button>
+    <!-- <ion-input placeholder="Enter Input" type="text" [(ngModel)]="name" text-right id="input" ></ion-input> -->
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+            <img src="assets/img/rat.png" style="width:100%;height:100%" [routerLink]="['/song']" routerDirection ="foward">
+      </ion-col>
+      <ion-col>
+        <img src="assets/img/line.png">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="assets/img/chrome.png">
+      </ion-col>
+      <ion-col>
+        <img src="assets/img/rat.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
